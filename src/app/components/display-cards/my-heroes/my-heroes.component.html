@@ -1,0 +1,12 @@
+<div class="container" *ngIf="this.isDataFromServerOk">
+  <div class="heroes-cards-container">
+      <div *ngFor="let hero of heroesList">
+              <app-hero-card [hero]="hero"></app-hero-card>
+      </div>
+  </div>
+</div>
+<div class="comtainer">
+<div class="heroesDataMsg" *ngIf="!this.isDataFromServerOk">
+  <span>Oopssie! {{this.serverMsg}} </span>
+</div>
+</div>

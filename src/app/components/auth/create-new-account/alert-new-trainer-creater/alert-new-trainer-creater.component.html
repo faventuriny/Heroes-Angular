@@ -1,0 +1,15 @@
+<div>
+  <div class="container" (click)="onClickCloseWindow()">
+      <div class="box" (click)="onEvent($event)">
+          <div class="form">
+              <div class="row main">A new trainer was created! His details are:</div>
+              <div class="row"><strong>Name: </strong> {{trainer.name}}</div>
+              <div class="row"><strong>Email: </strong> {{trainer.email}}</div>
+              <div class="row"><strong>Password: </strong> {{trainer.password}}</div>
+              <div class="buttons">
+                  <button type="button" (click)="onClickCloseWindow()">Ok</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

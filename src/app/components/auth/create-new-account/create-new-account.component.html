@@ -1,0 +1,51 @@
+<app-alert-new-trainer-creater
+  *ngIf="displayAlertWindow"
+  (closeAlert)="onClickCloseAlert($event)"
+  [trainer]="newTrainer"
+></app-alert-new-trainer-creater>
+<div class="general">
+    <div class="inner">
+      <div class="title">Create a New Trainer</div>
+      <div class="form">
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+          <div  class="input-span-div">
+            <input
+              formControlName="name"
+              type="text"
+              placeholder="Name"
+              [ngClass]="!email.valid && email.touched ? 'invalid-input' : 'input'"
+            />
+            <span *ngIf="!name.valid && name.touched" class="span">First letter must be a capital letter and only letters are allowed</span>
+          </div>
+          <div class="input-span-div">
+            <input
+              formControlName="email"
+              type="text"
+              placeholder="Email"
+              [ngClass]="!email.valid && email.touched ? 'invalid-input' : 'input'"
+            />
+            <span *ngIf="!email.valid && email.touched" class="span">You must enter a mail</span>
+          </div>
+          <div class="input-span-div">
+            <input
+              formControlName="password"
+              type="password"
+              placeholder="Password"
+              [ngClass]="!password.valid && password.touched ? 'invalid-input' : 'input'"
+            />
+            <span *ngIf="!password.valid && password.touched" class="span">A valid password mast have at least 8 charts with: </span>
+            <span *ngIf="!password.valid && password.touched" class="span">&#9670; One capital letter </span>
+            <span *ngIf="!password.valid && password.touched" class="span">&#9670; One digit</span>
+            <span *ngIf="!password.valid && password.touched" class="span">&#9670; One non-alphanumeric char </span>
+          </div>
+          <div class="button">
+            <div>
+              <button type="submit" [disabled]="!form.valid">
+                Create New Account
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

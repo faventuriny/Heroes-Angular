@@ -1,0 +1,29 @@
+.container{
+  width: 100%;
+  height: 100%;
+  background: #8D99AE;
+}
+.heroes-cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+
+}
+
+@media (min-width: 650px) {
+  .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .heroes-cards-container {
+      width: 80%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+  }
+
+}

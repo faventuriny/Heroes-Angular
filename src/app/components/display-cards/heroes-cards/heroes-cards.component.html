@@ -1,0 +1,17 @@
+<div class="container" *ngIf="this.isDataFromServerOk">
+  <div class="heroesDataMsg">
+      <span>Please note that heroe’s data is private!</span>
+  </div>
+  <div class="heroes-cards-container">
+      <div *ngFor="let hero of heroesList" class="card">
+              <app-simple-hero-card [hero]="hero"></app-simple-hero-card>
+      </div>
+  </div>
+</div>
+<div class="comtainer">
+<div class="heroesDataMsg" *ngIf="!this.isDataFromServerOk">
+  <span>Oopssie! {{this.serverMsg}}</span>
+</div>
+</div>
+
+

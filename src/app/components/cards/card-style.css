@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  width: 250px;
+  border-radius: 5px;
+  padding: 25px;
+  background-color: #eeeeee;
+  box-shadow: 2px 4px 8px gray;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 15px;
+}
+.container h1{
+  text-align: center;
+}
+.container P {
+  width: 230px;
+  margin: 0;
+  padding: 10px;
+}
+.container .hide-ability {
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.container .hide-ability:hover {
+background: rgba(141, 153, 174, 0.5);
+
+border-radius: 5px;
+
+
+}
+.container .show-all-ability {
+  overflow:visible;
+  background: #eeeeee;
+  z-index: 200;
+  cursor: pointer;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+button {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #2B2D42;
+  color: white;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+button :disabled,
+button[disabled] {
+  background-color: #B8B8B8;
+  border: none;
+  cursor: not-allowed;
+}

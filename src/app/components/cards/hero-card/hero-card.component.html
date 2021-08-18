@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>{{ hero.name }}</h1>
+  <P (click)="onClickTogglHideShow()" [ngClass]="showAbility ? 'show-all-ability': 'hide-ability'" ><strong>Ability:</strong>  {{hero.ability}}</P>
+  <P><strong>Date Started: </strong> {{hero.dateStarted | date: "MMMM d, y"}}</P>
+  <P><strong>Suit Color: </strong> {{hero.suitColor}}</P>
+  <P><strong>Starting Power: </strong> {{hero.startingPower | number:'1.2-2'}}</P>
+  <P><strong>Current Power: </strong> {{hero.currentPower | number:'1.2-2'}}</P>
+  <P><strong>How Many Times Trained Today: </strong> {{hero.howManyTimesTrainedToday}}</P>
+  <P><strong>Trainer Id: </strong> {{hero.trainerID}}</P>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <input
+          [value]="form.value.id"
+          type="hidden"
+          for="id"
+          formControlName="id"
+      />
+      <input
+          [value]="form.value.currentPower"
+          type="hidden"
+          for="currentPower"
+          formControlName="currentPower"
+      />
+      <input
+      [value]="form.value.howManyTimesTrainedToday"
+      type="hidden"
+      for="howManyTimesTrainedToday"
+      formControlName="howManyTimesTrainedToday"
+      />
+      <button type="submit" [disabled]="!form.valid">Train the Hero!</button>
+  </form>
+</div>

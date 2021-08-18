@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>{{ hero.name }}</h1>
+  <P
+      (click)="onClickTogglHideShow()"
+      [ngClass]="showAbility ? 'show-all-ability': 'hide-ability'"
+  >
+      <strong>Ability: </strong> {{hero.ability}}
+  </P>
+  <P><strong>Suit Color: </strong> {{hero.suitColor}}</P>
+  <P><strong>Current Power: </strong> {{hero.currentPower | number:'1.2-2'}}</P>
+  <P><strong>Trainer Id: </strong> {{hero.trainerID}}</P>
+</div>
+

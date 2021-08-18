@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="inner">
+      <div class="logo">
+          <a (click)="onClickLogo()">Heroes Academy</a>
+      </div>
+      <div class="actions" *ngIf="this.userName !== ''">
+        <div class="name">
+          <span>Hi {{this.userName}}</span>
+        </div>
+        <div class="buttons">
+          <button class="logout" (click)="onClickLogout()">Logout</button>
+          <button class="createNewTrainer" [routerLink]="['/new-account']" routerLinkActive="router-link-active">Create New Trainer</button>
+          <button class="myHeroes" (click)="onClickMyHeroes()">{{this.buttonMsg}}</button>
+        </div>
+      </div>
+  </div>
+</div>
