@@ -57,7 +57,7 @@ margin-bottom: 10px;
   border: none;
   border-radius: 5px;
   margin: 5px;
-  height: 52px;
+  height: 70px;
 }
 .actions button.logout,
 .actions button.createNewTrainer  {
@@ -69,6 +69,12 @@ margin-bottom: 10px;
 }
 .actions button:hover {
   background: #8D99AE;
+}
+
+@media (min-width: 360px) {
+  .actions button {
+    height: 52px;
+  }
 }
 
 @media (min-width: 650px) {
